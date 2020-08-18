@@ -1,0 +1,13 @@
+com\kovko\anki\serializer\TemplateSerializerTest.class
+com\kovko\anki\serializer\DeckConfigurationsSerializerTest.class
+com\kovko\anki\serializer\ModelsSerializerTest.class
+com\kovko\anki\serializer\DeckSerializerTest.class
+com\kovko\anki\serializer\FieldSerializerTest.class
+com\kovko\anki\serializer\LapsedCardsConfigurationSerializerTest.class
+com\kovko\anki\serializer\DeckConfigurationSerializerTest.class
+com\kovko\anki\serializer\ReviewCardsConfigurationSerializerTest.class
+com\kovko\anki\serializer\CollectionConfigurationSerializerTest.class
+com\kovko\anki\serializer\ModelSerializerTest.class
+com\kovko\anki\serializer\DecksSerializerTest.class
+com\kovko\anki\serializer\MediaFilesSerializerTest.class
+com\kovko\anki\serializer\NewCardsConfigurationSerializerTest.class
