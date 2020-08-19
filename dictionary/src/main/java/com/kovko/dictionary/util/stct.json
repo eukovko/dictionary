@@ -1,0 +1,452 @@
+{
+  "1560398687927": {
+    "vers": [],
+    "name": "Basic (and reversed card) DELETE",
+    "tags": [
+      "DOCKER-SWARM"
+    ],
+    "did": 1578707594752,
+    "usn": 0,
+    "req": [
+      [
+        0,
+        "all",
+        [
+          0
+        ]
+      ]
+    ],
+    "flds": [
+      {
+        "name": "Front",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 0,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Back",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 1,
+        "font": "Arial",
+        "size": 20
+      }
+    ],
+    "sortf": 0,
+    "tmpls": [
+      {
+        "name": "Card 1",
+        "qfmt": "{{Tags}} <br><br>\n{{Front}}",
+        "did": null,
+        "bafmt": "",
+        "afmt": "{{FrontSide}}\n\n<hr id=answer>\n\n{{Back}}",
+        "ord": 0,
+        "bqfmt": ""
+      }
+    ],
+    "mod": 1582891199,
+    "latexPost": "\\end{document}",
+    "type": 0,
+    "id": "1560398687927",
+    "css": ".card {\n font-family: arial;\n font-size: 20px;\n text-align: left;\n color: black;\n background-color: white;\n}\n",
+    "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n"
+  },
+  "1558278600938": {
+    "vers": [],
+    "name": "Basic (and reversed card)",
+    "tags": [
+      "LOMBOK"
+    ],
+    "did": 1578707594752,
+    "usn": 3359,
+    "req": [
+      [
+        0,
+        "any",
+        [
+          0
+        ]
+      ],
+      [
+        1,
+        "any",
+        [
+          1
+        ]
+      ]
+    ],
+    "flds": [
+      {
+        "name": "Front",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 0,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Back",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 1,
+        "font": "Arial",
+        "size": 20
+      }
+    ],
+    "sortf": 0,
+    "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+    "tmpls": [
+      {
+        "name": "Card 1",
+        "qfmt": "{{Tags}} <br><br>\n{{Front}}\n\n",
+        "did": null,
+        "bafmt": "",
+        "afmt": "{{FrontSide}}\n\n<hr id=answer>\n\n{{Back}}",
+        "ord": 0,
+        "bqfmt": ""
+      },
+      {
+        "name": "Card 2",
+        "qfmt": "{{Tags}} <br><br>\n{{Back}}\n",
+        "did": null,
+        "bafmt": "",
+        "afmt": "{{FrontSide}}\n\n<hr id=answer>\n\n{{Front}}",
+        "ord": 1,
+        "bqfmt": ""
+      }
+    ],
+    "latexPost": "\\end{document}",
+    "type": 0,
+    "id": 1558278600938,
+    "css": ".card {\n font-family: arial;\n font-size: 20px;\n text-align: left;\n color: black;\n background-color: white;\n}\n",
+    "mod": 1591105285
+  },
+  "1536061496848": {
+    "vers": [],
+    "name": "Cloze",
+    "tags": [
+      "DRUMS"
+    ],
+    "did": 1578707594752,
+    "usn": 3370,
+    "flds": [
+      {
+        "name": "Text",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 0,
+        "font": "Arial",
+        "size": 20
+      }
+    ],
+    "sortf": 0,
+    "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+    "tmpls": [
+      {
+        "name": "Cloze",
+        "qfmt": "{{Tags}}\n<br><br>\n{{cloze:Text}}\n<br><br>\n<div style='font-family: Arial; font-size: 10px;'></div>\n<br>\n<div style='font-family: Arial; font-size: 10px;'></div>\n",
+        "did": null,
+        "bafmt": "",
+        "afmt": "{{cloze:Text}}<br>\n<br><br>\n<div style='font-family: Arial; font-size: 10px;'></div>\n<br>\n<div style='font-family: Arial; font-size: 10px;'></div>",
+        "ord": 0,
+        "bqfmt": "123"
+      }
+    ],
+    "latexPost": "\\end{document}",
+    "type": 1,
+    "id": 1536061496848,
+    "css": ".card {\n font-family: arial;\n font-size: 20px;\n text-align: ;\n color: black;\n background-color: white;\n}\n\n.cloze {\n font-weight: bold;\n color: blue;\n}\n.nightMode .cloze {\n color: lightblue;\n}",
+    "mod": 1592233295,
+    "req": [
+      [
+        0,
+        "any",
+        [
+          0
+        ]
+      ]
+    ]
+  },
+  "1536061496850": {
+    "vers": [],
+    "name": "Basic (optional reversed card)",
+    "tags": [
+      "JAVA9",
+      "JSHELL"
+    ],
+    "did": 1578707594752,
+    "usn": 0,
+    "req": [
+      [
+        0,
+        "any",
+        [
+          0
+        ]
+      ],
+      [
+        1,
+        "all",
+        [
+          1,
+          2
+        ]
+      ]
+    ],
+    "flds": [
+      {
+        "name": "Front",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 0,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Back",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 1,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Add Reverse",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 2,
+        "font": "Arial",
+        "size": 20
+      }
+    ],
+    "sortf": 0,
+    "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+    "tmpls": [
+      {
+        "name": "Card 1",
+        "qfmt": "{{Tags}}\n<br><br>\n{{Front}}",
+        "did": null,
+        "bafmt": "",
+        "afmt": "\n{{FrontSide}}\n\n<hr id=answer>\n\n{{Back}}",
+        "ord": 0,
+        "bqfmt": ""
+      },
+      {
+        "name": "Card 2",
+        "qfmt": "{{Tags}}\n<br><br>\n{{#Add Reverse}}{{Back}}{{/Add Reverse}}",
+        "did": null,
+        "bafmt": "",
+        "afmt": "{{FrontSide}}\n\n<hr id=answer>\n\n{{Front}}",
+        "ord": 1,
+        "bqfmt": ""
+      }
+    ],
+    "latexPost": "\\end{document}",
+    "type": 0,
+    "id": "1536061496850",
+    "css": ".card {\n font-family: arial;\n font-size: 20px;\n color: black;\n background-color: white;\n}\n",
+    "mod": 1578855891
+  },
+  "1536505567100": {
+    "vers": [],
+    "name": "Image Occlusion Enhanced",
+    "tags": [
+      "SPRING"
+    ],
+    "did": 1578707594752,
+    "usn": 0,
+    "req": [
+      [
+        0,
+        "all",
+        [
+          2
+        ]
+      ]
+    ],
+    "flds": [
+      {
+        "name": "ID (hidden)",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 0,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Header",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 1,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Image",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 2,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Question Mask",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 3,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Footer",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 4,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Remarks",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 5,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Sources",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 6,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Extra 1",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 7,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Extra 2",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 8,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Answer Mask",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 9,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Original Mask",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 10,
+        "font": "Arial",
+        "size": 20
+      }
+    ],
+    "sortf": 1,
+    "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+    "tmpls": [
+      {
+        "name": "IO Card",
+        "qfmt": "{{#Image}}\n<div id=\"io-header\">{{Header}}</div>\n<div id=\"io-wrapper\">\n  <div id=\"io-overlay\">{{Question Mask}}</div>\n  <div id=\"io-original\">{{Image}}</div>\n</div>\n<div id=\"io-footer\">{{Footer}}</div>\n\n<script>\n// Prevent original image from loading before mask\naFade = 50, qFade = 0;\nvar mask = document.querySelector('#io-overlay>img');\nfunction loaded() {\n    var original = document.querySelector('#io-original');\n    original.style.visibility = \"visible\";\n}\nif (mask === null || mask.complete) {\n    loaded();\n} else {\n    mask.addEventListener('load', loaded);\n}\n</script>\n{{/Image}}\n",
+        "did": null,
+        "bafmt": "",
+        "afmt": "{{#Image}}\n<div id=\"io-header\">{{Header}}</div>\n<div id=\"io-wrapper\">\n  <div id=\"io-overlay\">{{Answer Mask}}</div>\n  <div id=\"io-original\">{{Image}}</div>\n</div>\n{{#Footer}}<div id=\"io-footer\">{{Footer}}</div>{{/Footer}}\n<button id=\"io-revl-btn\" onclick=\"toggle();\">Toggle Masks</button>\n<div id=\"io-extra-wrapper\">\n  <div id=\"io-extra\">\n    {{#Remarks}}\n      <div class=\"io-extra-entry\">\n        <div class=\"io-field-descr\">Remarks</div>{{Remarks}}\n      </div>\n    {{/Remarks}}\n    {{#Sources}}\n      <div class=\"io-extra-entry\">\n        <div class=\"io-field-descr\">Sources</div>{{Sources}}\n      </div>\n    {{/Sources}}\n    {{#Extra 1}}\n      <div class=\"io-extra-entry\">\n        <div class=\"io-field-descr\">Extra 1</div>{{Extra 1}}\n      </div>\n    {{/Extra 1}}\n    {{#Extra 2}}\n      <div class=\"io-extra-entry\">\n        <div class=\"io-field-descr\">Extra 2</div>{{Extra 2}}\n      </div>\n    {{/Extra 2}}\n  </div>\n</div>\n\n<script>\n// Toggle answer mask on clicking the image\nvar toggle = function() {\n  var amask = document.getElementById('io-overlay');\n  if (amask.style.display === 'block' || amask.style.display === '')\n    amask.style.display = 'none';\n  else\n    amask.style.display = 'block'\n}\n\n// Prevent original image from loading before mask\naFade = 50, qFade = 0;\nvar mask = document.querySelector('#io-overlay>img');\nfunction loaded() {\n    var original = document.querySelector('#io-original');\n    original.style.visibility = \"visible\";\n}\nif (mask === null || mask.complete) {\n    loaded();\n} else {\n    mask.addEventListener('load', loaded);\n}\n</script>\n{{/Image}}\n",
+        "ord": 0,
+        "bqfmt": ""
+      }
+    ],
+    "latexPost": "\\end{document}",
+    "type": 0,
+    "id": "1536505567100",
+    "css": "/* GENERAL CARD STYLE */\n.card {\n  font-family: \"Helvetica LT Std\", Helvetica, Arial, Sans;\n  font-size: 150%;\n  text-align: center;\n  color: black;\n  background-color: white;\n}\n\n/* OCCLUSION CSS START - don't edit this */\n#io-overlay {\n  position:absolute;\n  top:0;\n  width:100%;\n  z-index:3\n}\n\n#io-original {\n  position:relative;\n  top:0;\n  width:100%;\n  z-index:2;\n  visibility: hidden;\n}\n\n#io-wrapper {\n  position:relative;\n  width: 100%;\n}\n/* OCCLUSION CSS END */\n\n/* OTHER STYLES */\n#io-header{\n  font-size: 1.1em;\n  margin-bottom: 0.2em;\n}\n\n#io-footer{\n  max-width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0.8em;\n  font-style: italic;\n}\n\n#io-extra-wrapper{\n  /* the wrapper is needed to center the\n  left-aligned blocks below it */\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0.5em;\n}\n\n#io-extra{\n  text-align:center;\n  display: inline-block;\n}\n\n.io-extra-entry{\n  margin-top: 0.8em;\n  font-size: 0.9em;\n  text-align:left;\n}\n\n.io-field-descr{\n  margin-bottom: 0.2em;\n  font-weight: bold;\n  font-size: 1em;\n}\n\n#io-revl-btn {\n  font-size: 0.5em;\n}\n\n/* ADJUSTMENTS FOR MOBILE DEVICES */\n\n.mobile .card, .mobile #content {\n  font-size: 120%;\n  margin: 0;\n}\n\n.mobile #io-extra-wrapper {\n  width: 95%;\n}\n\n.mobile #io-revl-btn {\n  font-size: 0.8em;\n}\n",
+    "mod": 1579852727
+  },
+  "1536061496854": {
+    "vers": [],
+    "name": "Basic",
+    "tags": [],
+    "did": 1590562734055,
+    "usn": 3342,
+    "req": [
+      [
+        0,
+        "any",
+        [
+          0
+        ]
+      ]
+    ],
+    "flds": [
+      {
+        "name": "Front",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 0,
+        "font": "Arial",
+        "size": 20
+      },
+      {
+        "name": "Back",
+        "media": [],
+        "sticky": false,
+        "rtl": false,
+        "ord": 1,
+        "font": "Arial",
+        "size": 20
+      }
+    ],
+    "latexsvg": false,
+    "sortf": 0,
+    "tmpls": [
+      {
+        "name": "Card 1",
+        "qfmt": "{{Tags}}\n<br><br>\n{{Front}}",
+        "did": null,
+        "bafmt": "",
+        "afmt": "{{FrontSide}}\n\n<hr id=answer>\n\n{{Back}}",
+        "ord": 0,
+        "bqfmt": ""
+      }
+    ],
+    "mod": 1590562746,
+    "latexPost": "\\end{document}",
+    "type": 0,
+    "id": 1536061496854,
+    "css": ".card {\n font-family: arial;\n font-size: 20px;\n text-align: left;\n color: black;\n background-color: white;\n}\n",
+    "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n"
+  }
+}
