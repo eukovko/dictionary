@@ -23,7 +23,7 @@ public class FileProcessor implements Processor {
 
         String text = exchange.getIn().getBody(String.class);
         // TODO: 5/15/2020 Change header name to ENUM
-        String filename = exchange.getIn().getHeader("CamelFileName", String.class);
+        String filename = exchange.getIn().getHeader(Exchange.FILE_NAME, String.class);
         String baseName = FilenameUtils.getBaseName(filename);
         int length = baseName.length();
         String sourceLanguage = baseName.substring(length - 5, length-3);
