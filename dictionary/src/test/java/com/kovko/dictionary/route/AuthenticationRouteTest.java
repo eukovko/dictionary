@@ -56,11 +56,6 @@ class AuthenticationRouteTest {
     }
 
     @Test
-    void testContext() {
-        assertThat(producerTemplate).isNotNull();
-    }
-
-    @Test
     void testAuthentication() throws InterruptedException {
 
         mockEndpoint.expectedMessageCount(1);
