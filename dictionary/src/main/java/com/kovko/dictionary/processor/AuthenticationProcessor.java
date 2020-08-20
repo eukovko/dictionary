@@ -15,8 +15,7 @@ public class AuthenticationProcessor implements Processor {
 
     private static final String BEARER_TYPE_FORMAT = "Bearer %s";
 
-    // TODO: 8/19/2020 Remove initial token
-    private String authenticationToken = "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmxlSEFpT2pFMU9USXlOREF4Tnpnc0lrMXZaR1ZzSWpwN0lrTm9ZWEpoWTNSbGNuTlFaWEpFWVhraU9qVXdNREF3TENKVmMyVnlTV1FpT2pFMk1UTXNJbFZ1YVhGMVpVbGtJam9pTTJGaVpqSTJOVEl0WVRrMU9DMDBOVFEwTFRobFptWXRaRGd3TWpZek56SmtZMlU1SW4xOS4zWlZJWElKRENFV29PckVQWW96amdYVkgwVlpqbnZrRkxURHBKWVBKNkdn";
+    private String authenticationToken;
 
     @Override
     public void process(Exchange exchange) {
