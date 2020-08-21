@@ -1,7 +1,7 @@
 package com.kovko.dictionary.route;
 
 import com.kovko.dictionary.dto.MiniCard;
-import com.kovko.dictionary.dto.TranslationBatch;
+import com.kovko.dictionary.dto.MinicardTranslationBatch;
 import com.kovko.dictionary.mapper.Mapper;
 import com.kovko.dictionary.processor.*;
 import com.kovko.dictionary.repository.MinicardRepository;
@@ -23,9 +23,9 @@ public class MiniCardRoute extends BaseRoute {
 
     private static final int PORT = 9090;
     private final DataFormat minicardJacksonDataFormat = new JacksonDataFormat(MiniCard.class);
-    private final DataFormat translationBatchJacksonDataFormat = new JacksonDataFormat(TranslationBatch.class);
+    private final DataFormat translationBatchJacksonDataFormat = new JacksonDataFormat(MinicardTranslationBatch.class);
     private final AuthenticationProcessor authenticationProcessor;
-    private final BatchRestProcessor batchRestProcessor;
+    private final MinicardBatchRestProcessor minicardBatchRestProcessor;
     private final MinicardTranslationProcessor minicardTranslationProcessor;
     private final Mapper mapper;
     private final MiniCardDatabaseProcessor miniCardDatabaseProcessor;
@@ -33,12 +33,12 @@ public class MiniCardRoute extends BaseRoute {
 
 
     public MiniCardRoute(HttpOperationFailedProcessor httpOperationFailedProcessor,
-                         AuthenticationProcessor authenticationProcessor, BatchRestProcessor batchRestProcessor,
+                         AuthenticationProcessor authenticationProcessor, MinicardBatchRestProcessor minicardBatchRestProcessor,
                          MinicardTranslationProcessor minicardTranslationProcessor, Mapper mapper,
                          MiniCardDatabaseProcessor miniCardDatabaseProcessor, MinicardRepository minicardRepository) {
         super(httpOperationFailedProcessor);
         this.authenticationProcessor = authenticationProcessor;
-        this.batchRestProcessor = batchRestProcessor;
+        this.minicardBatchRestProcessor = minicardBatchRestProcessor;
         this.minicardTranslationProcessor = minicardTranslationProcessor;
         this.mapper = mapper;
         this.miniCardDatabaseProcessor = miniCardDatabaseProcessor;
@@ -76,7 +76,7 @@ public class MiniCardRoute extends BaseRoute {
 
         from("direct:minicard.translationBatch")
                 .streamCaching()
-                .process(batchRestProcessor)
+                .process(minicardBatchRestProcessor)
                 .split(body())
                 .log("Minicard translation batch: ${body}")
                 .process(minicardTranslationProcessor)

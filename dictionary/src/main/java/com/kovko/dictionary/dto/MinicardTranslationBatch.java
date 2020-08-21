@@ -12,8 +12,7 @@ import java.util.List;
  * Date: 7/24/2020
  */
 @Data
-@JsonNaming(PropertyNamingStrategy.UpperCamelCaseStrategy.class)
-public class TranslationBatch {
+public class MinicardTranslationBatch {
 
     private List<String> words;
     private LingvoLanguage sourceLanguage;

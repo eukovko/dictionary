@@ -54,7 +54,7 @@ public abstract class AbstractAnkiProcessor implements Processor {
     public void process(Exchange exchange) throws Exception {
 
         ImportDeck importDeck = exchange.getIn().getBody(ImportDeck.class);
-        List<String> words = importDeck.getTranslationBatch().getWords();
+        List<String> words = importDeck.getMinicardTranslationBatch().getWords();
 
         log.info("Deck for import {}", importDeck);
 

@@ -1,6 +1,7 @@
 package com.kovko.dictionary.processor;
 
-import com.kovko.dictionary.dto.TranslationBatch;
+import com.kovko.dictionary.dto.ArticleTranslationBatch;
+import com.kovko.dictionary.dto.MinicardTranslationBatch;
 import com.kovko.dictionary.util.LingvoLanguage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
@@ -15,14 +16,15 @@ import java.util.List;
  */
 @Component
 @Slf4j
-public class BatchRestProcessor implements Processor {
+public class ArticleBatchRestProcessor implements Processor {
 
     @Override
     public void process(Exchange exchange) {
 
-        TranslationBatch batch = exchange.getIn().getBody(TranslationBatch.class);
+        ArticleTranslationBatch batch = exchange.getIn().getBody(ArticleTranslationBatch.class);
         LingvoLanguage sourceLanguage = batch.getSourceLanguage();
         LingvoLanguage targetLanguage = batch.getTargetLanguage();
+        String dictionary = batch.getDictionary();
 
         log.info("Translate text file from {} to {}", sourceLanguage, targetLanguage);
 
@@ -32,6 +34,7 @@ public class BatchRestProcessor implements Processor {
 
         exchange.getIn().setHeader("srcLang", sourceLanguage.getLingvoCode());
         exchange.getIn().setHeader("dstLang", targetLanguage.getLingvoCode());
+        exchange.getIn().setHeader("dict", dictionary);
         exchange.getIn().setBody(wordList);
     }
 }

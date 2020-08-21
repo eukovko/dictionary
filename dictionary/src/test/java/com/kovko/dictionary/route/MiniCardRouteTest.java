@@ -34,7 +34,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ContextConfiguration(classes = {MiniCardRoute.class,
         HttpOperationFailedProcessor.class, AuthenticationRoute.class,
         AuthenticationAggregator.class, AuthenticationProcessor.class,
-        BatchRestProcessor.class, MinicardTranslationProcessor.class,
+        MinicardBatchRestProcessor.class, MinicardTranslationProcessor.class,
         Mapper.class, MiniCardDatabaseProcessor.class},
         initializers = ConfigFileApplicationContextInitializer.class)
 @MockBean(classes = MinicardRepository.class)

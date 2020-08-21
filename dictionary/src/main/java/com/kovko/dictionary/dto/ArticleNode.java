@@ -34,7 +34,7 @@ import java.util.List;
 @JsonNaming(PropertyNamingStrategy.UpperCamelCaseStrategy.class)
 public class ArticleNode {
 
-    // TODO: 6/29/2020 Substitute by enum
+    // TODO: 6/29/2020 Substitute by enum (only constants can be used in annotations)
 
     @Data
     @JsonNaming(PropertyNamingStrategy.UpperCamelCaseStrategy.class)

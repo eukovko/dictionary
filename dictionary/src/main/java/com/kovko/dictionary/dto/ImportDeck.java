@@ -12,5 +12,5 @@ public class ImportDeck {
     private String deckName;
     private String packageName;
     private String dictionaryName;
-    private TranslationBatch translationBatch;
+    private MinicardTranslationBatch minicardTranslationBatch;
 }

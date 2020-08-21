@@ -1,6 +1,5 @@
 package com.kovko.dictionary.processor;
 
-import com.kovko.dictionary.dto.ImportDeck;
 import com.kovko.dictionary.dto.MinicardTranslationBatch;
 import com.kovko.dictionary.util.LingvoLanguage;
 import lombok.extern.slf4j.Slf4j;
@@ -12,17 +11,16 @@ import java.util.List;
 
 /**
  * Author: eukovko
- * Date: 7/28/2020
+ * Date: 7/24/2020
  */
 @Component
 @Slf4j
-public class ImportDeckProcessor implements Processor {
+public class MinicardBatchRestProcessor implements Processor {
 
     @Override
-    public void process(Exchange exchange) throws Exception {
+    public void process(Exchange exchange) {
 
-        ImportDeck importDeck = exchange.getIn().getBody(ImportDeck.class);
-        MinicardTranslationBatch batch = importDeck.getMinicardTranslationBatch();
+        MinicardTranslationBatch batch = exchange.getIn().getBody(MinicardTranslationBatch.class);
         LingvoLanguage sourceLanguage = batch.getSourceLanguage();
         LingvoLanguage targetLanguage = batch.getTargetLanguage();
 

@@ -1,7 +1,7 @@
 package com.kovko.dictionary.route;
 
 import com.kovko.dictionary.dto.ArticleApiPresentation;
-import com.kovko.dictionary.dto.TranslationBatch;
+import com.kovko.dictionary.dto.ArticleTranslationBatch;
 import com.kovko.dictionary.mapper.Mapper;
 import com.kovko.dictionary.processor.*;
 import com.kovko.dictionary.repository.ArticleRepository;
@@ -21,11 +21,11 @@ public class ArticleRoute extends BaseRoute{
 
     private static final int PORT = 9090;
     private final DataFormat articleJacksonDataFormat = new JacksonDataFormat(ArticleApiPresentation.class);
-    private final DataFormat translationBatchJacksonDataFormat = new JacksonDataFormat(TranslationBatch.class);
+    private final DataFormat translationBatchJacksonDataFormat = new JacksonDataFormat(ArticleTranslationBatch.class);
     private final AuthenticationProcessor authenticationProcessor;
     private final ArticleTranslationProcessor articleTranslateProcessor;
     private final ArticleDatabaseProcessor articleDatabaseProcessor;
-    private final BatchRestProcessor batchRestProcessor;
+    private final MinicardBatchRestProcessor minicardBatchRestProcessor;
     private final Mapper mapper;
     private final ArticleRepository articleRepository;
 
@@ -33,13 +33,13 @@ public class ArticleRoute extends BaseRoute{
                         AuthenticationProcessor authenticationProcessor,
                         ArticleTranslationProcessor articleTranslateProcessor,
                         ArticleDatabaseProcessor articleDatabaseProcessor,
-                        BatchRestProcessor batchRestProcessor,
+                        MinicardBatchRestProcessor minicardBatchRestProcessor,
                         Mapper mapper, ArticleRepository articleRepository) {
         super(httpOperationFailedProcessor);
         this.authenticationProcessor = authenticationProcessor;
         this.articleTranslateProcessor = articleTranslateProcessor;
         this.articleDatabaseProcessor = articleDatabaseProcessor;
-        this.batchRestProcessor = batchRestProcessor;
+        this.minicardBatchRestProcessor = minicardBatchRestProcessor;
         this.mapper = mapper;
         this.articleRepository = articleRepository;
     }
@@ -74,10 +74,11 @@ public class ArticleRoute extends BaseRoute{
                 .to("direct:article.translationBatch");
 
         from("direct:article.translationBatch")
-                .process(batchRestProcessor)
+                .process(minicardBatchRestProcessor)
                 .split(body())
                 .log("Batch article body ${body}")
-                .process(articleTranslateProcessor)
+                // TODO: 8/21/2020 Seems that we don't need this part
+//                .process(articleTranslateProcessor)
                 .to("{{api.translation.article.input}}");
 
         from("{{api.translation.article.input}}")

@@ -19,12 +19,12 @@ public class ArticleTranslationProcessor implements Processor {
 
         String word = exchange.getIn().getBody(String.class);
         // TODO: 5/15/2020 Check with enum
-        String srcLang = exchange.getIn().getHeader("srcLang", String.class);
-        String dstLang = exchange.getIn().getHeader("dstLang", String.class);
+        Integer srcLang = exchange.getIn().getHeader("srcLang", Integer.class);
+        Integer dstLang = exchange.getIn().getHeader("dstLang", Integer.class);
         String dictionary = exchange.getIn().getHeader("dict", String.class);
 
         // TODO: 5/15/2020 Change to ints
-        String header = String.format("heading=%s&dict=%s&srcLang=%s&dstLang=%s", word, dictionary, srcLang, dstLang);
+        String header = String.format("heading=%s&dict=%s&srcLang=%d&dstLang=%d", word, dictionary, srcLang, dstLang);
         exchange.getIn().setHeader(Exchange.HTTP_QUERY, header);
         log.info("Article for {} in {} dictionary ", word, dictionary);
     }
